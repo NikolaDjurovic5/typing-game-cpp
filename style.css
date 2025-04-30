@@ -1,0 +1,147 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+#input-container, #igra-container, #leaderboard-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#baza-container {
+    margin-bottom: 20px;
+}
+
+#prikazRecenice {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+#rezultati {
+    margin-top: 20px;
+}
+
+#leaderboard {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+#leaderboard th, #leaderboard td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#leaderboard th {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+#leaderboard tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#leaderboard tr:hover {
+    background-color: #d7d5d5;
+}
+/* Onemogucavanje selektovanja teksta */
+body {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+/* Dodavanje pokazivaca za zabranjeno (not-allowed) */
+body {
+    cursor: not-allowed;
+}
+
+#easybtn.selected, #hardbtn.selected {
+    background-color: #075a0b !important;
+}
+
+/* Stil za zvezde */
+.star {
+    position: fixed;
+    top: 20%;
+    width: 150px; /* Promenite veličinu zvezda prema potrebama */
+    height: 150px; /* Promenite veličinu zvezda prema potrebama */
+    background: transparent;
+    border: 2px solid yellow; /* Dodajemo border i menjamo boju na žutu */
+    border-radius: 50%; /* Okrugli oblik zvezde */
+    color: yellow; /* Boja unutrašnjosti zvezde */
+    font-size: 150px; /* Promenite veličinu fonta zvezde prema potrebama */
+    line-height: 40px; /* Centriranje teksta zvezde */
+    text-align: center;
+    transform-origin: center;
+    animation: rotateStar 5s linear infinite, changeColor 5s infinite; /* Dodajemo animaciju promene boje */
+}
+
+/* Animacija rotacije zvezde */
+@keyframes rotateStar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Animacija promene boje zvezde */
+@keyframes changeColor {
+    0% {
+        color: yellow;
+        border-color: yellow;
+    }
+    50% {
+        color: rgb(239, 39, 8); /* Promenite boju na koju želite da zvezda promeni */
+        border-color: orange; /* Promenite boju na koju želite da zvezda promeni */
+    }
+    100% {
+        color: yellow;
+        border-color: yellow;
+    }
+}
+
+/* Stil za zvezdu sa leve strane */
+.star.left {
+    left: 100px;
+}
+
+/* Stil za zvezdu sa desne strane */
+.star.right {
+    right: 100px;
+}

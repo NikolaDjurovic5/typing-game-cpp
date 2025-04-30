@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Igrica sa recenicama</title>
+</head>
+<body>
+   
+    <audio id="pobedaMuzika" src="pobeda.mp3" type="audio/mp3"></audio>
+    <audio id="pocetnaMuzika" src="pocetna.mp3" type="audio/mp3"></audio>
+    
+    <div id="input-container" style="text-align: center;">
+        <h1>BRZINSKO KUCANJE</h1>
+        <br>
+        TYPE
+    </div>
+
+    <div id="input-container">
+        <label for="ime">Unesite svoje ime:</label>
+        <input type="text" id="ime" placeholder="Vase ime">
+        <div style="text-align: center; " >
+        <button onclick="izaberiMod('easy')" id="easybtn" style=" display: inline-block; margin: auto; width: 100px;">Easy</button>
+        <button onclick="izaberiMod('hard')" id="hardbtn" style=" display: inline-block; margin: auto; width: 100px;">Hard</button><br><br>
+        </div>
+        <button onclick="prikaziRandomRecenicu()" style=" display: block; margin: auto; width: 100px;">Start</button>
+    </div>
+    
+    
+
+    <div id="igra-container" style="display: none;">
+        <div>
+            <label for="unosRecenice">Unesite rečenicu:</label>
+            <input type="text" id="unosRecenice" placeholder="Unesite rečenicu">
+            <button onclick="proveriUnos()">Proveri</button>
+        </div>
+        <br>
+        <div id="prikazRecenice"></div>
+        <div id="vreme"></div> <!-- Ovo je novi div za prikaz vremena -->
+        <div id="rezultati"></div>
+    </div>
+
+    <div id="leaderboard-container">
+        <h2>Leaderboard</h2>
+        <table id="leaderboard">
+            <thead>
+                <tr>
+                    <th>Ime</th>
+                    <th>Vreme (s)</th>
+                    <th>Mod</th>
+                </tr>
+            </thead>
+            <tbody id="leaderboardBody"></tbody>
+        </table>
+    </div>
+
+    <div class="star left">★</div>
+    <div class="star right">★</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
